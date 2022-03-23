@@ -88,4 +88,21 @@ print("Criando lista de alimentos...")
 #         df.to_csv(csvfilename2, header= None ,mode ="a", sep="|")
 
 
-    
+foodlist = []
+with open(csvfilename2, newline='') as csvfile:
+    spamreader = csv.reader(csvfile, delimiter='|')#, quotechar='|')
+    for row in spamreader:
+        foodlist.append(row)
+
+food = 1
+while food < 60:
+    print(food)
+    print(foodlist[food][1])
+    print(foodlist[food][2])
+    print(foodlist[food][3])
+    food = food+1
+
+
+
+
+
